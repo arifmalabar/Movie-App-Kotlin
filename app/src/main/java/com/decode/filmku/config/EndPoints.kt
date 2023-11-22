@@ -9,12 +9,5 @@ class EndPoints {
         var nowPlaying : String = ServerConfig.baseUrl+"/now_playing"
         var popularFilm : String = ServerConfig.baseUrl+"/popular";
     }
-    inner class FecthData : AsyncTask<String, String, String>() {
-        override fun doInBackground(vararg p0: String): String {
-            var data =RequestHandler.sendRequestHandler(p0.toString())
-            var dataJson : JSONObject = JSONObject("results");
-            return data;
-        }
 
-    }
 }
